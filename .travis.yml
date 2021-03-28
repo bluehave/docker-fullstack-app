@@ -16,7 +16,7 @@ after_success:
   - docker build -t bluehave/docker-backend ./backend
   - docker build -t bluehave/docker-nginx ./nginx
 
-  - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin_open
+  - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
 
   - docker push bluehave/docker-frontend
   - docker push bluehave/docker-backend
